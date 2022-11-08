@@ -145,22 +145,22 @@ export function StepsProvider({ children }: ProviderProps) {
      else if (salary > 18200 && salary< 37001){
       const fieldValue = "$18,201-$37,000";
       dispatch({ type: 'form-value', name, fieldValue }); 
-      let calculatedvalue = (salary - 18000) * 0.19;
+      let calculatedvalue = (salary - 18200) * 0.19;
       setTax(salary, calculatedvalue);
   } else if (salary > 37000 && salary< 90001){
       const fieldValue = "$37,001-$90,000";
       dispatch({ type: 'form-value', name, fieldValue });
-      let calculatedvalue = (salary - 37000 + 3572) * 0.32;
+      let calculatedvalue = (salary - 37000) * 0.325 + 3572 ;
       setTax(salary, calculatedvalue);
   } else if (salary > 90000 && salary< 180001){
     const fieldValue = "$90,001-$180,200";
     dispatch({ type: 'form-value', name, fieldValue });
-    let calculatedvalue = (salary - 90000 + 20797) * 0.37;
+    let calculatedvalue = (salary - 90000 ) * 0.37+ 20797;
     setTax(salary, calculatedvalue);
   }  else if (salary > 180000){
     const fieldValue = "$180,001-over";
     dispatch({ type: 'form-value', name, fieldValue });
-    let calculatedvalue = (salary - 180000 + 54097) * 0.45;
+    let calculatedvalue = (salary - 180000 ) * 0.45+ 54097;
     setTax(salary, calculatedvalue);
   }
   }
