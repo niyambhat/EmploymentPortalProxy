@@ -8,7 +8,7 @@ export default function Footer() {
       {'Composed by '}
       <Link
         color="inherit"
-        href="https://github.com/awran5/react-material-ui-step-form-ts"
+        href="https://github.com/niyambhat/EmploymentPortalProxy"
       >
         Niyam Bhat
       </Link>
