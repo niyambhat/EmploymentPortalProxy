@@ -2,7 +2,7 @@ import { ValidationSchema } from './Context'
 
 export const initialValues: ValidationSchema = {
     firstName: {
-    value: '',
+    value: 'John',
     error: '',
     required: true,
     validate: 'text',
@@ -11,7 +11,7 @@ export const initialValues: ValidationSchema = {
     helperText: 'Custom error message'
   },
   lastName: {
-    value: '',
+    value: 'Legend',
     error: '',
     required: true,
     validate: 'text',
@@ -23,12 +23,12 @@ export const initialValues: ValidationSchema = {
     error: ''
   },
   gender: {
-    value: '',
+    value: 'Male',
     error: '',
     validate: 'select'
   },
   nation: {
-    value: '',
+    value: 'Australian',
     error: '',
     required: true,
     validate: 'text',
@@ -36,14 +36,14 @@ export const initialValues: ValidationSchema = {
     maxLength: 20
   },
   city: {
-    value: '',
+    value: 'Perth',
     error: '',
     validate: 'text',
     minLength: 3,
     maxLength: 20
   },
   email: {
-    value: '',
+    value: 'local@local.com',
     error: '',
     validate: 'email'
   },
@@ -55,7 +55,7 @@ export const initialValues: ValidationSchema = {
     helperText: 'Please accept our terms and conditions'
   },
   phone: {
-    value: '',
+    value: '123123123',
     error: '',
     validate: 'phone',
     maxLength: 15
@@ -67,24 +67,24 @@ export const initialValues: ValidationSchema = {
     maxLength: 15
   },
   tfn: {
-    value: '',
+    value: '3214321',
     error: '',
     validate: 'number',
     maxLength: 15
   },
   bsb: {
-    value: '',
+    value: '432156',
     error: '',
     validate: 'number',
     maxLength: 6
   }, account: {
-    value: '',
+    value: '1234567',
     error: '',
     validate: 'number',
     maxLength: 6
   },
   superProvider:{
-    value: '',
+    value: 'Rest Super',
     error: '',
     required: true,
     validate: 'text',
@@ -92,7 +92,7 @@ export const initialValues: ValidationSchema = {
     maxLength: 20,
   },
   superNumber:{
-    value: '',
+    value: '123456',
     error: '',
     required: true,
     validate: 'number',
@@ -111,5 +111,10 @@ export const initialValues: ValidationSchema = {
   taxableIncome:{
     value:"",
     maxLength:20
+  },
+  superContribution:{
+    value:"",
+    maxLength:20,
+    validate: 'number',
   }
 }
