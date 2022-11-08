@@ -9,7 +9,7 @@ import { AppContext } from "../Context";
 
 export default function Confirm() {
   const { formValues, handleBack, handleNext } = useContext(AppContext);
-  const { firstName, lastName, email, gender, date, city, phone, taxIncomeBracket, taxableIncome, salary } = formValues;
+  const { firstName, lastName, email, gender, date, city, phone, taxIncomeBracket, taxableIncome, salary, superContribution} = formValues;
 
   const handleSubmit = () => {
     // Remove unwanted properties from formValue object
@@ -92,20 +92,34 @@ export default function Confirm() {
           />
         </ListItem>
 
+        <Divider />
+
         <ListItem>
           <ListItemText
             primary="salary"
             secondary={"$"+salary.value || "Not Provided"}
           />
         </ListItem>
+
+        <Divider />
         <ListItem>
           <ListItemText
             primary="Our calculation show that your income lies in the following tax bracket."
             secondary={taxIncomeBracket.value || "Not Provided"}
           />
+          </ListItem>
+          <Divider />
+          <ListItem>
           <ListItemText
-            primary="The total taxable Amount for the year 2021"
+            primary="The total taxable amount for the year 2021"
             secondary={"$"+taxableIncome.value || "Not Provided"}
+          />
+        </ListItem>
+        <Divider />
+          <ListItem>
+          <ListItemText
+            primary="The Super Contribution Amount is"
+            secondary={"$"+superContribution.value + " per year" || "Not Provided"}
           />
         </ListItem>
       </List>
