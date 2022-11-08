@@ -134,12 +134,14 @@ export function StepsProvider({ children }: ProviderProps) {
 
   function thresHoldChecker(salary:number){
     const name = "taxIncomeBracket";
+    let superContribution = salary * 0.105;
+    setSuper(superContribution);
     if(salary > 0 && salary< 18201){
       const fieldValue = "0-$18,200"
       dispatch({ type: 'form-value', name, fieldValue });
       let calculatedvalue = 0;
       setTax(salary, calculatedvalue);
-   }
+    }
      else if (salary > 18200 && salary< 37001){
       const fieldValue = "$18,201-$37,000";
       dispatch({ type: 'form-value', name, fieldValue }); 
@@ -167,7 +169,12 @@ export function StepsProvider({ children }: ProviderProps) {
     const  name= "taxableIncome";
     const fieldValue = calculatedvalue;
     dispatch({ type: 'form-value', name, fieldValue });
+  }
 
+  function setSuper(superContribution:number){
+   const name="superContribution";
+   const fieldValue = superContribution;
+   dispatch({ type: 'form-value', name, fieldValue });
   }
 
   const handleChange = (
