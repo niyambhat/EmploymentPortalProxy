@@ -51,7 +51,7 @@ export default function SecondStep() {
             fullWidth
             label="Enter your Salary"
             name="salary"
-            placeholder="TFN"
+            placeholder="Salary"
             value={salary.value}
             onBlur={()=>thresHoldChecker(salary.value)}
             onChange={handleChange}
